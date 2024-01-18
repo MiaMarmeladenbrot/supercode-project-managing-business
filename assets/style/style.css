@@ -1,0 +1,474 @@
+@font-face {
+  font-family: Manrope;
+  src: url(../font/Manrope-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Acme;
+  src: url(../font/Acme-Regular.ttf);
+}
+
+@font-face {
+  font-family: AnekBangla;
+  src: url(../font/AnekBangla-VariableFont_wdth\wght.ttf);
+}
+
+@font-face {
+  font-family: B612 Mono;
+  src: url(../font/B612Mono-Bold.ttf);
+}
+
+/* ! Allgemeine Stylings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Manrope, Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: clamp(4rem, 4vw, 6rem);
+  line-height: 6rem;
+  font-weight: 800;
+
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(3rem, 3.5vw, 4rem);
+  line-height: 5rem;
+  font-weight: 800;
+
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: Acme, Arial, Helvetica, serif;
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  line-height: 2.8rem;
+
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  line-height: 2.8rem;
+  font-weight: 700;
+
+  /* margin-bottom: 1rem; */
+}
+
+h5 {
+  font-size: clamp(2rem, 2.5vw, 2.4rem);
+  line-height: 2.8rem;
+  font-weight: 600;
+
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-family: AnekBangla;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  line-height: 2.6rem;
+  color: #f57059;
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+p,
+li {
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  line-height: 3.5rem;
+  color: #757095;
+
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+
+  margin-bottom: 1rem;
+}
+
+.button-orange {
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  line-height: 3rem;
+
+  text-align: center;
+  color: white;
+  background-color: #f57059;
+
+  padding: 15px 40px;
+
+  border-radius: 30px;
+
+  display: inline-block;
+  margin: 1rem 5rem 6rem 0;
+}
+
+.button-green {
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  line-height: 2.5rem;
+
+  text-align: center;
+  color: white;
+  background-color: #05796b;
+
+  padding: 15px 40px;
+
+  border-radius: 30px;
+
+  box-shadow: 0 30px 100px #05796cca;
+
+  display: inline-block;
+  margin: 1rem 0 6rem 0;
+}
+
+/* ! Section 1: Header */
+header {
+  margin: 0 3rem 6rem 3rem;
+}
+
+/* # Farbverlauf noch einfügen */
+
+/* ! Navigationsleiste */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 5rem 0;
+}
+
+nav p {
+  font-family: AnekBangla;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -3%;
+}
+
+nav a {
+  color: black;
+  padding: 0 3rem;
+  font-weight: 600;
+}
+
+.arrow::after {
+  content: url(../img/Pfeilnachunten.svg);
+  padding-left: 1rem;
+}
+
+nav .button-orange {
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+  line-height: 1.9rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ! Text und Bild */
+.header-flex {
+  display: flex;
+}
+
+.header-flex article {
+  width: 50%;
+}
+
+/* # p noch schmaler machen */
+
+.success {
+  display: flex;
+}
+
+.success p {
+  color: #8593a3;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  line-height: 2.5rem;
+}
+
+/* ! Main Bereich */
+main {
+  margin: 0 3rem 6rem 3rem;
+}
+/* ! Section 2: Partner-Businesses */
+.partner {
+  margin-bottom: 10rem;
+}
+.partner p {
+  font-family: Acme, Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 2.2vw, 2.2rem);
+
+  color: black;
+  text-align: center;
+
+  margin-bottom: 3rem;
+}
+
+.partner div {
+  text-align: center;
+}
+
+.partner img {
+  margin: 0 2rem;
+  height: 2.2rem;
+}
+
+/* ! Section 3: Services */
+.services {
+  text-align: center;
+
+  background: url(../img/Spirale.png) right no-repeat;
+  background-size: contain;
+
+  margin-bottom: 10rem;
+}
+
+.services h6 {
+  color: black;
+}
+
+.services h2:last-of-type {
+  margin-bottom: 5rem;
+}
+
+/* ? Karten griden */
+.services article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.services div {
+  text-align: left;
+  background-color: white;
+
+  border: 1px solid #e7e7e7;
+  border-radius: 1rem;
+
+  padding: 5rem 6rem 1rem 4rem;
+}
+
+.services img {
+  margin-bottom: 2rem;
+}
+
+.services p {
+  font-size: 1.2rem;
+}
+
+.services div:nth-of-type(8) {
+  background-color: #05796b;
+  color: white;
+}
+
+.services div:nth-of-type(8) p {
+  color: white;
+}
+
+/* ! Section 4: Learn about Process */
+.process {
+  text-align: center;
+
+  margin: 10rem;
+}
+
+.process p:last-of-type {
+  margin-bottom: 7rem;
+}
+
+/* ? Kacheln gridden */
+.process article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.process h3 {
+  font-family: Manrope, Arial, sans-serif;
+}
+
+.process img {
+  margin-bottom: 3rem;
+}
+
+.strich {
+  align-self: self-start;
+  justify-self: center;
+
+  padding: 8rem 0;
+}
+
+/* ? 1. Variante mit Bild im CSS vergrößert und mit minus-margin - unelegant, sieht aber am besten aus?   */
+.bildeins img {
+  margin-top: -30px;
+  transform: scale(1.4);
+}
+
+.bildeins h3 {
+  margin-top: -50px;
+}
+
+/* ? 3. Variante mit 1 als p und Bild als Hintergrundbild */
+/* .bildeins {
+  background: url(../img/bildeins.png) top center no-repeat;
+  background-size: contain;
+}
+
+.number {
+  font-family: B612 Mono;
+  font-size: 1.5rem;
+  background-color: #f6f6f7;
+  border-radius: 50%;
+  width: 3rem;
+  color: black;
+
+  margin-bottom: 12rem;
+} */
+
+/* ! Section 5: Download */
+.download {
+  margin-bottom: 5rem;
+}
+.download article {
+  text-align: center;
+}
+
+.download a img {
+  vertical-align: text-bottom;
+  margin-right: 10px;
+  width: 25px;
+}
+
+/* ? Bild und Text gridden */
+.download section {
+  display: flex;
+}
+
+.download section img {
+  object-fit: contain;
+}
+
+.download section div {
+  padding: 20rem 17rem 0 0;
+}
+
+/* ! Section 6: Start today */
+.plans-heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* ? Karten flexen */
+.plans {
+  background: url(../img/Spirale.png) center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* ? übergreifendes Styling für beide Karten */
+.plans div {
+  border-radius: 1rem;
+  width: 50rem;
+  padding: 3rem;
+}
+
+.plans div p:first-of-type {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.plans div h2 {
+  font-size: 6rem;
+}
+
+.plans div p:nth-of-type(2) {
+  margin-bottom: 3rem;
+}
+
+.plans ul {
+  padding-left: 3rem;
+  padding-top: 3rem;
+
+  margin-bottom: 3rem;
+}
+
+/* ? Styling für die erste Karte */
+.plan1 {
+  background-color: white;
+
+  box-shadow: 0 0 20px rgb(226, 225, 225);
+}
+
+.plan1 span {
+  font-size: 1.6rem;
+  color: #8593a3;
+}
+
+.plan1 ul {
+  border-top: 1px solid #8593a34d;
+}
+
+.no {
+  color: #8593a3;
+}
+
+.plan1 a {
+  color: #8593a3;
+  text-align: center;
+  border: 1px solid #8593a353;
+  border-radius: 3rem;
+  display: inline-block;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+/* ? Styling für die zweite Karte */
+.plan2 {
+  background-color: #05796b;
+}
+
+.plan2 h2,
+.plan2 p,
+.plan2 li {
+  color: white;
+}
+
+.plan2 span {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.plan2 ul {
+  border-top: 1px solid rgba(255, 255, 255, 0.316);
+}
+
+.plan2 a {
+  color: #282828;
+  background-color: white;
+  text-align: center;
+  border-radius: 3rem;
+  display: inline-block;
+  width: 100%;
+  padding: 1.5rem;
+}
