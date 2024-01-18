@@ -142,10 +142,14 @@ a {
 
 /* ! Section 1: Header */
 header {
-  margin: 0 3rem 6rem 3rem;
+  padding: 0 3rem 6rem 3rem;
+  /* # Farbverlauf noch anpassen */
+  background: linear-gradient(
+    -100deg,
+    rgba(73, 164, 248, 0.24) 10.8%,
+    rgba(15, 209, 186, 0.07) 67.77%
+  );
 }
-
-/* # Farbverlauf noch einfügen */
 
 /* ! Navigationsleiste */
 nav {
@@ -153,7 +157,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  margin: 5rem 0;
+  padding: 5rem 0;
 }
 
 nav p {
@@ -191,7 +195,9 @@ nav .button-orange {
   width: 50%;
 }
 
-/* # p noch schmaler machen */
+.header-flex article p {
+  width: 90%;
+}
 
 .success {
   display: flex;
@@ -316,6 +322,7 @@ main {
   padding: 8rem 0;
 }
 
+/* # Alternative für das erste Bild finden? */
 /* ? 1. Variante mit Bild im CSS vergrößert und mit minus-margin - unelegant, sieht aber am besten aus?   */
 .bildeins img {
   margin-top: -30px;
@@ -370,7 +377,7 @@ main {
   padding: 20rem 17rem 0 0;
 }
 
-/* ! Section 6: Start today */
+/* ! Section 6: Start today + Plans */
 .plans-heading {
   text-align: center;
   margin-bottom: 5rem;
@@ -378,8 +385,8 @@ main {
 
 /* ? Karten flexen */
 .plans {
-  background: url(../img/Spirale.png) center no-repeat;
-  background-size: cover;
+  background: url(../img/spirale2.png) center no-repeat;
+  background-size: contain;
 
   display: flex;
   justify-content: center;
@@ -389,7 +396,7 @@ main {
 /* ? übergreifendes Styling für beide Karten */
 .plans div {
   border-radius: 1rem;
-  width: 50rem;
+  width: 40rem;
   padding: 3rem;
 }
 
@@ -410,7 +417,14 @@ main {
   padding-left: 3rem;
   padding-top: 3rem;
 
+  list-style: none;
+
   margin-bottom: 3rem;
+}
+
+.plans li {
+  padding-left: 10px;
+  /* # Icons noch mittig zu Text setzen */
 }
 
 /* ? Styling für die erste Karte */
@@ -431,6 +445,19 @@ main {
 
 .no {
   color: #8593a3;
+}
+
+/* # hier weiter machen - Icons so davor setzen, dass sie mittig sind mit der Schrift daneben */
+.yes::before {
+  content: url(../img/plan-yes-green.svg);
+  position: relative;
+  top: 0.2vw;
+  left: -2vw;
+  padding-right: -2rem;
+}
+
+.no::marker {
+  content: url(../img/plan-no.svg);
 }
 
 .plan1 a {
@@ -461,6 +488,10 @@ main {
 
 .plan2 ul {
   border-top: 1px solid rgba(255, 255, 255, 0.316);
+}
+
+.plan2 li::marker {
+  content: url(../img/plan-yes-white.svg);
 }
 
 .plan2 a {
