@@ -136,7 +136,6 @@ a {
   box-shadow: 0 30px 100px #05796cca;
 
   display: inline-block;
-
   margin: 1rem 0 6rem 0;
 }
 
@@ -189,7 +188,6 @@ nav .button-orange {
 }
 
 /* ! Burger-Menu */
-
 .burger-wrapper {
   padding: 2rem 0;
 }
@@ -215,9 +213,6 @@ nav .button-orange {
 
 .header-flex article p {
   width: 90%;
-}
-
-.header-flex p {
   margin-bottom: 3rem;
 }
 
@@ -234,7 +229,7 @@ nav .button-orange {
 
 /* ! Main Bereich */
 main {
-  margin: 0 3rem 6rem 3rem;
+  padding: 0 3rem 6rem 3rem;
 }
 
 /* ! Section 2: Partner-Businesses */
@@ -242,13 +237,8 @@ main {
   margin-bottom: 10rem;
 }
 
-.partner p {
-  font-family: Acme, Arial, Helvetica, sans-serif;
-  font-size: clamp(2rem, 2.2vw, 2.2rem);
-
-  color: black;
+.partner h3 {
   text-align: center;
-
   margin-bottom: 3rem;
 }
 
@@ -262,6 +252,7 @@ main {
 }
 
 /* ! Section 3: Services */
+/* ? Überschrift */
 .services {
   text-align: center;
 
@@ -271,16 +262,13 @@ main {
   margin-bottom: 10rem;
 }
 
-.services h2 {
-  width: 60%;
-  margin: 0 auto;
-}
-
 .services h6 {
   color: black;
 }
 
-.services h2:last-of-type {
+.services h2 {
+  width: 60%;
+  margin: 0 auto;
   margin-bottom: 5rem;
 }
 
@@ -325,7 +313,9 @@ main {
 /* ! Section 4: Learn More about Process */
 .process {
   text-align: center;
-  margin: 10rem;
+
+  width: 60%;
+  margin: 0 auto;
 }
 
 .process p:last-of-type {
@@ -372,6 +362,10 @@ main {
 
   width: 60%;
   margin: 0 auto 5rem auto;
+}
+
+.download p {
+  margin-bottom: 3rem;
 }
 
 .download section {
@@ -693,6 +687,7 @@ footer h4 {
 /* # Tablet / 768px */
 @media only screen and (max-width: 768px) {
   .services h2,
+  .process,
   .download article,
   .plans-heading {
     width: 80%;
@@ -705,12 +700,12 @@ footer h4 {
 
   /* ! Section 4: Learn More about Process */
   .bildeins img {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     transform: scale(2);
   }
 
   .bildeins h3 {
-    margin-top: -5px;
+    margin-top: -1rem;
   }
 
   .strich {
@@ -801,11 +796,11 @@ footer h4 {
   /* ! Section 4: Learn More about Process */
   .bildeins img {
     margin-top: 0;
-    transform: scale(1.2);
+    transform: scale(1);
   }
 
   .bildeins h3 {
-    margin-top: -5rem;
+    margin-top: -7rem;
   }
 
   .process article {
@@ -831,6 +826,13 @@ footer h4 {
 
   .plans div {
     margin: 0 auto;
+  }
+
+  .yes-green::before,
+  .no::before,
+  .plan2 li::before {
+    top: 0.5vw;
+    left: -4vw;
   }
 
   /* ! Section 7: Testimonials */
