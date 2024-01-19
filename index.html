@@ -10,7 +10,7 @@
     <article class="wrapper">
       <!-- ! Section 1: Header -->
       <header>
-        <!-- ! Navigationsleiste -->
+        <!-- ! Navigationsleiste für Desktop und Tablet -->
         <nav>
           <p>Danial Habib</p>
           <div>
@@ -25,7 +25,12 @@
           </div>
         </nav>
 
-        <!-- ! Burger-Menü für Mobile -->
+        <!-- ! Burger-Menu für Mobile Version -->
+        <section class="burger-wrapper">
+          <div class="burger"></div>
+          <div class="burger"></div>
+          <div class="burger"></div>
+        </section>
 
         <!-- ! Text und Bild -->
         <section class="header-flex">
@@ -156,17 +161,8 @@
 
           <article>
             <div class="bildeins">
-              <!-- # Alternative für das erste Bild finden? -->
-              <!-- ? 1. Variante mit Bild im CSS vergrößert und mit minus-margin - unelegant, sieht aber am besten aus? -->
+              <!-- ? da ich das Bild aus Figma nicht in der gleichen Größe runterladen konnte wie die anderen beiden, habe ich es hier via CSS vergrößert und mit minus-margin positioniert - unelegant, aber so ist das Leben eben manchmal ... -->
               <img src="./assets/img/einsbild1.png" alt="" />
-
-              <!-- ? 2. Variante mit beiden img einzeln, dann aber noch positionieren -->
-              <!-- <img src="./assets/img/eins.svg" alt="" />
-              <img src="./assets/img/kreis1.png" alt="" /> -->
-
-              <!-- ? 3. Variante mit 1 als p und Bild als Hintergrundbild -->
-              <!-- <p class="number">1</p> -->
-
               <h3>Register</h3>
               <p>
                 It more shed went up is roof if loud case. Delay music in lived
@@ -208,16 +204,21 @@
             <p>
               End-to-end payments and financial management in a single solution.
             </p>
-            <a class="button-orange" href="#"
-              ><img src="./assets/img/icons8-apple-30.png" alt="" />Playstore</a
-            >
-            <a class="button-green" href="#"
-              ><img
-                src="./assets/img/googleplay.png"
-                width="30px"
-                alt=""
-              />Google Play</a
-            >
+            <section>
+              <a class="button-orange" href="#"
+                ><img
+                  src="./assets/img/icons8-apple-30.png"
+                  alt=""
+                />Playstore</a
+              >
+              <a class="button-green" href="#"
+                ><img
+                  src="./assets/img/googleplay.png"
+                  width="30px"
+                  alt=""
+                />Google Play</a
+              >
+            </section>
           </article>
 
           <section>

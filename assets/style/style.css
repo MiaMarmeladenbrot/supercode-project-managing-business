@@ -34,7 +34,6 @@ html {
   max-width: 1400px;
   width: 100vw;
   margin: 0 auto;
-  /* background-color: grey; */
 }
 
 img {
@@ -119,7 +118,7 @@ a {
   border-radius: 30px;
 
   display: inline-block;
-  margin: 1rem 5rem 6rem 0;
+  margin: 1rem 0 6rem 0;
 }
 
 .button-green {
@@ -130,13 +129,14 @@ a {
   color: white;
   background-color: #05796b;
 
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
 
   border-radius: 30px;
 
   box-shadow: 0 30px 100px #05796cca;
 
   display: inline-block;
+
   margin: 1rem 0 6rem 0;
 }
 
@@ -188,6 +188,22 @@ nav .button-orange {
   margin: 0;
 }
 
+/* ! Burger-Menu */
+
+.burger-wrapper {
+  padding: 2rem 0;
+}
+
+.burger {
+  background-color: #2b2c2e;
+  width: 2rem;
+  height: 0.3rem;
+  border-radius: 0.4rem;
+  margin: 0.2rem;
+
+  display: none;
+}
+
 /* ! Text und Bild */
 .header-flex {
   display: flex;
@@ -199,6 +215,10 @@ nav .button-orange {
 
 .header-flex article p {
   width: 90%;
+}
+
+.header-flex p {
+  margin-bottom: 3rem;
 }
 
 .success {
@@ -267,12 +287,12 @@ main {
 /* ? Karten griden */
 .services article {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem)); */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+  gap: 1rem;
+  justify-content: center;
 }
 
-.services div {
+.services article div {
   text-align: left;
   background-color: white;
 
@@ -280,22 +300,25 @@ main {
   border-radius: 1rem;
 
   padding: 5rem 6rem 1rem 4rem;
+
+  width: 30rem;
+  margin: 0 auto;
 }
 
-.services img {
+.services article img {
   margin-bottom: 2rem;
 }
 
-.services p {
+.services article p {
   font-size: 1.2rem;
 }
 
-.services div:nth-of-type(8) {
+.services article div:nth-of-type(8) {
   background-color: #05796b;
   color: white;
 }
 
-.services div:nth-of-type(8) p {
+.services article div:nth-of-type(8) p {
   color: white;
 }
 
@@ -329,8 +352,7 @@ main {
   padding: 8rem 0;
 }
 
-/* # Alternative für das erste Bild finden? */
-/* ? 1. Variante mit Bild im CSS vergrößert und mit minus-margin - unelegant, sieht aber am besten aus?   */
+/* ? da ich das Bild aus Figma nicht in der gleichen Größe runterladen konnte wie die anderen beiden, habe ich es hier via CSS vergrößert und mit minus-margin positioniert - unelegant, aber so ist das Leben eben manchmal ...    */
 .bildeins img {
   margin-top: -20px;
   transform: scale(1.5);
@@ -340,26 +362,9 @@ main {
   margin-top: -20px;
 }
 
-/* ? 3. Variante mit 1 als p und Bild als Hintergrundbild */
-/* .bildeins {
-  background: url(../img/bildeins.png) top center no-repeat;
-  background-size: contain;
-}
-
-.number {
-  font-family: B612 Mono;
-  font-size: 1.5rem;
-  background-color: #f6f6f7;
-  border-radius: 50%;
-  width: 3rem;
-  color: black;
-
-  margin-bottom: 12rem;
-} */
-
 /* ! Section 5: Download */
 .download {
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 
 .download article {
@@ -367,6 +372,12 @@ main {
 
   width: 60%;
   margin: 0 auto 5rem auto;
+}
+
+.download section {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }
 
 .download a img {
@@ -382,6 +393,10 @@ main {
 
 .download section div {
   padding: 20rem 17rem 0 0;
+}
+
+.download section p {
+  margin-bottom: 4rem;
 }
 
 /* ! Section 6: Start today + Plans */
@@ -598,7 +613,7 @@ main {
 
 .discover h2 {
   color: white;
-  font-size: 5.5rem;
+  font-size: clamp(3.5rem, 4vw, 5.5rem);
   line-height: 6rem;
 
   width: 60%;
@@ -616,8 +631,6 @@ main {
 /* ! Footer */
 footer {
   padding: 2rem 3rem 6rem 3rem;
-
-  /* # gradient noch schön machen */
   background: radial-gradient(
     circle,
     rgba(73, 163, 248, 0.09) 5%,
@@ -677,15 +690,6 @@ footer h4 {
 }
 
 /* # MEDIA QUERIES */
-/* # Service-Kacheln ab 1050px zwespaltig */
-@media only screen and (max-width: 1050px) {
-  /* ! Section 3: Services */
-  .services article {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-}
-
 /* # Tablet / 768px */
 @media only screen and (max-width: 768px) {
   .services h2,
@@ -697,12 +701,6 @@ footer h4 {
   /* ! Section 1: Header */
   nav a {
     padding: 0 1rem;
-  }
-
-  /* ! Section 3: Services */
-  .services article {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
   }
 
   /* ! Section 4: Learn More about Process */
@@ -751,7 +749,6 @@ footer h4 {
 
   /* ! Section 8: Discover */
   .discover article {
-    padding: 10rem 0 0 0;
     margin: 0 6rem 10rem 6rem;
   }
 
@@ -770,13 +767,95 @@ footer h4 {
 }
 
 /* # Mobile / 567px */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 567px) {
+  .große-Bilder {
+    display: none;
+  }
+
   /* ! Section 1: Header */
+
+  header {
+    text-align: center;
+  }
   nav {
     display: none;
   }
 
   .burger {
     display: block;
+  }
+
+  .header-flex article {
+    width: 100%;
+  }
+
+  .header-flex article:nth-of-type(2) {
+    display: none;
+  }
+
+  /* ! Section 3: Services */
+  .services {
+    background-image: none;
+  }
+
+  /* ! Section 4: Learn More about Process */
+  .bildeins img {
+    margin-top: 0;
+    transform: scale(1.2);
+  }
+
+  .bildeins h3 {
+    margin-top: -5rem;
+  }
+
+  .process article {
+    grid-template-columns: 1fr;
+  }
+
+  /* ! Section 5: Download */
+  .download {
+    text-align: center;
+  }
+
+  .download section {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* ! Section 6: Start today + Plans */
+
+  .plans {
+    flex-direction: column;
+    background-image: none;
+  }
+
+  .plans div {
+    margin: 0 auto;
+  }
+
+  /* ! Section 7: Testimonials */
+  .testimonial1 {
+    text-align: center;
+  }
+
+  .quote {
+    padding: 0;
+  }
+
+  .quote img {
+    margin: 1rem auto;
+  }
+
+  .urheber div {
+    margin: 0 auto;
+  }
+
+  /* ! Footer */
+  footer article {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer article div:first-of-type {
+    grid-column: 1 / 3;
   }
 }
