@@ -45,7 +45,7 @@ h1 {
   line-height: 6rem;
   font-weight: 800;
 
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -53,7 +53,7 @@ h2 {
   line-height: 5rem;
   font-weight: 800;
 
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -61,15 +61,14 @@ h3 {
   font-size: clamp(1.8rem, 2.5vw, 2.2rem);
   line-height: 2.8rem;
 
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 h4 {
   font-size: clamp(1.8rem, 2vw, 2rem);
   line-height: 2.8rem;
   font-weight: 700;
-
-  /* margin-bottom: 1rem; */
+  margin-bottom: 2rem;
 }
 
 h5 {
@@ -77,7 +76,7 @@ h5 {
   line-height: 2.8rem;
   font-weight: 600;
 
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 h6 {
@@ -87,7 +86,7 @@ h6 {
   color: #f57059;
   text-transform: uppercase;
 
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 p,
@@ -140,15 +139,16 @@ a {
   margin: 1rem 0 6rem 0;
 }
 
+.große-Bilder {
+  object-fit: contain;
+  width: 50%;
+}
+
 /* ! Section 1: Header */
 header {
-  padding: 0 3rem 6rem 3rem;
-  /* # Farbverlauf noch anpassen */
-  background: linear-gradient(
-    -100deg,
-    rgba(73, 164, 248, 0.24) 10.8%,
-    rgba(15, 209, 186, 0.07) 67.77%
-  );
+  padding: 0 3rem;
+  margin-bottom: 10rem;
+  background: linear-gradient(45deg, white 60%, rgba(15, 209, 186, 0.21) 100%);
 }
 
 /* ! Navigationsleiste */
@@ -214,10 +214,12 @@ nav .button-orange {
 main {
   margin: 0 3rem 6rem 3rem;
 }
+
 /* ! Section 2: Partner-Businesses */
 .partner {
   margin-bottom: 10rem;
 }
+
 .partner p {
   font-family: Acme, Arial, Helvetica, sans-serif;
   font-size: clamp(2rem, 2.2vw, 2.2rem);
@@ -258,7 +260,7 @@ main {
 /* ? Karten griden */
 .services article {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
@@ -289,10 +291,9 @@ main {
   color: white;
 }
 
-/* ! Section 4: Learn about Process */
+/* ! Section 4: Learn More about Process */
 .process {
   text-align: center;
-
   margin: 10rem;
 }
 
@@ -303,7 +304,7 @@ main {
 /* ? Kacheln gridden */
 .process article {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
 }
 
@@ -316,21 +317,19 @@ main {
 }
 
 .strich {
-  align-self: self-start;
   justify-self: center;
-
   padding: 8rem 0;
 }
 
 /* # Alternative für das erste Bild finden? */
 /* ? 1. Variante mit Bild im CSS vergrößert und mit minus-margin - unelegant, sieht aber am besten aus?   */
 .bildeins img {
-  margin-top: -30px;
-  transform: scale(1.4);
+  margin-top: -20px;
+  transform: scale(1.5);
 }
 
 .bildeins h3 {
-  margin-top: -50px;
+  margin-top: -20px;
 }
 
 /* ? 3. Variante mit 1 als p und Bild als Hintergrundbild */
@@ -369,10 +368,6 @@ main {
   display: flex;
 }
 
-.download section img {
-  object-fit: contain;
-}
-
 .download section div {
   padding: 20rem 17rem 0 0;
 }
@@ -391,6 +386,8 @@ main {
   display: flex;
   justify-content: center;
   gap: 3rem;
+
+  margin-bottom: 10rem;
 }
 
 /* ? übergreifendes Styling für beide Karten */
@@ -424,10 +421,9 @@ main {
 
 .plans li {
   padding-left: 10px;
-  /* # Icons noch mittig zu Text setzen */
 }
 
-/* ? Styling für die erste Karte */
+/* ? Styling für Basic Plan */
 .plan1 {
   background-color: white;
 
@@ -447,17 +443,20 @@ main {
   color: #8593a3;
 }
 
-/* # hier weiter machen - Icons so davor setzen, dass sie mittig sind mit der Schrift daneben */
-.yes::before {
+.yes-green::before {
   content: url(../img/plan-yes-green.svg);
   position: relative;
-  top: 0.2vw;
-  left: -2vw;
-  padding-right: -2rem;
+  top: 0.3vw;
+  left: -1.5vw;
+  margin: 0 -1.5rem;
 }
 
-.no::marker {
+.no::before {
   content: url(../img/plan-no.svg);
+  position: relative;
+  top: 0.3vw;
+  left: -1.5vw;
+  margin: 0 -1.5rem;
 }
 
 .plan1 a {
@@ -470,7 +469,7 @@ main {
   padding: 1.5rem;
 }
 
-/* ? Styling für die zweite Karte */
+/* ? Styling für Premium Plan */
 .plan2 {
   background-color: #05796b;
 }
@@ -490,8 +489,12 @@ main {
   border-top: 1px solid rgba(255, 255, 255, 0.316);
 }
 
-.plan2 li::marker {
+.plan2 li::before {
   content: url(../img/plan-yes-white.svg);
+  position: relative;
+  top: 0.3vw;
+  left: -1.5vw;
+  margin: 0 -1.5rem;
 }
 
 .plan2 a {
@@ -502,4 +505,145 @@ main {
   display: inline-block;
   width: 100%;
   padding: 1.5rem;
+}
+
+/* ! Section 7: Testimonials */
+.testimonials {
+  margin-bottom: 10rem;
+}
+
+.testimonials h6,
+.testimonials h2 {
+  text-align: center;
+}
+
+.testimonials h6 {
+  color: #3734a9;
+}
+
+.testimonials h2 {
+  margin-bottom: 5rem;
+}
+
+.testimonial1 {
+  display: flex;
+  gap: 10rem;
+}
+
+.quote {
+  padding: 10rem 7rem 0 0;
+}
+
+.quote p {
+  color: #1b1c31;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+.urheber {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 4rem;
+}
+
+.urheber p:nth-of-type(1) {
+  color: black;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.urheber p:nth-of-type(2) {
+  color: #757095;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+}
+
+/* ! Section 8: Discover */
+.discover article {
+  text-align: center;
+  background-color: #05796b;
+  border-radius: 1.6rem;
+  padding: 10rem 0 0 0;
+  margin: 0 10rem 10rem 10rem;
+
+  position: relative;
+}
+
+.discover h2 {
+  color: white;
+  font-size: 5.5rem;
+  line-height: 6rem;
+}
+
+.discover h2:last-of-type {
+  margin-bottom: 4rem;
+}
+
+.discover img {
+  position: absolute;
+  top: 4vw;
+  left: 7vw;
+}
+
+/* ! Footer */
+footer {
+  padding: 2rem 3rem 6rem 3rem;
+
+  /* # gradient noch schön machen */
+  background: radial-gradient(
+    circle,
+    rgba(73, 163, 248, 0.09) 5%,
+
+    rgba(15, 209, 186, 0.09) 10%,
+    white 30%
+  );
+
+  /* background: linear-gradient(
+    166deg,
+    rgba(15, 209, 186, 0.09) 10%,
+
+    rgba(73, 163, 248, 0.09) 80%
+  ); */
+}
+
+footer article {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 4rem;
+}
+
+footer h5 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #181433;
+}
+
+footer p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #757095;
+
+  margin-bottom: 3rem;
+}
+
+footer a {
+  color: black;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  display: block;
+}
+
+footer img {
+  padding-right: 1rem;
+  vertical-align: middle;
+}
+
+footer h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #181433;
+  text-align: center;
 }
