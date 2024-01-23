@@ -3,6 +3,7 @@
 ## Task
 
 - Use everything you've learned so far in one project.
+- Design your own tablet and mobile version.
 
 ## Designvorlage
 
